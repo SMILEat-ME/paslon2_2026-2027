@@ -1,0 +1,31 @@
+---
+import { visi } from '../data/campaign';
+---
+
+<section id="visi">
+  <h2>Visi</h2>
+  <div class="win vis">
+    <div class="bar">
+      visi.txt
+      <span><i></i><i></i><i></i></span>
+    </div>
+    <div class="body">
+      <p>{visi}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .vis {
+    background: repeating-linear-gradient(45deg, var(--t3) 0 14px, var(--card) 14px 28px);
+  }
+
+  .vis p {
+    font-size: 22px;
+    margin: 0;
+    background: var(--card);
+    border: 2px dashed var(--p1);
+    padding: 14px;
+    line-height: 1.5;
+  }
+</style>

@@ -1,0 +1,77 @@
+---
+import { proker } from '../data/campaign';
+---
+
+<section id="proker">
+  <h2>Program Kerja</h2>
+  <div class="proker">
+    {proker.map((p) => (
+      <div class="win">
+        <div class={`bar ${p.isPinkHeader ? 'pk' : ''}`}>
+          {p.windowTitle}
+          <span><i></i><i></i><i></i></span>
+        </div>
+        <div class="body">
+          <h3><em>{p.title}</em></h3>
+          <div class="tag">{p.tagline}</div>
+          <details>
+            <summary>baca selengkapnya</summary>
+            <p>{p.description}</p>
+          </details>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .proker {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .proker h3 {
+    font-size: 28px;
+    color: var(--p1);
+  }
+
+  .proker .tag {
+    margin: 4px 0 10px;
+    font-weight: 600;
+  }
+
+  details summary {
+    cursor: pointer;
+    display: inline-block;
+    padding: 2px 12px;
+    background: var(--t2);
+    color: #10201f;
+    border: 2px solid var(--ln);
+    box-shadow: 2px 2px 0 var(--ln);
+    list-style: none;
+    user-select: none;
+    font-weight: 600;
+  }
+
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details[open] summary {
+    background: var(--p2);
+    color: #fff;
+  }
+
+  details p {
+    margin: 12px 0 0;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 820px) {
+    .proker {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

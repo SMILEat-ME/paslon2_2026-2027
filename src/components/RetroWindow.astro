@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  isPink?: boolean;
+  class?: string;
+  bodyClass?: string;
+}
+
+const { title, isPink = false, class: className = '', bodyClass = '' } = Astro.props;
+---
+
+<div class={`win ${className}`}>
+  <div class={`bar ${isPink ? 'pk' : ''}`}>
+    {title}
+    <span><i></i><i></i><i></i></span>
+  </div>
+  <div class={`body ${bodyClass}`}>
+    <slot />
+  </div>
+</div>

@@ -1,0 +1,249 @@
+:root {
+  --t1: #5dc1b9;
+  --t2: #8ae0db;
+  --t3: #b8f0ed;
+  --p1: #ff0077;
+  --p2: #ff599e;
+  --bg: #ffffff;
+  --ink: #1d2b2a;
+  --card: #ffffff;
+  --ln: #1d2b2a;
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html {
+  scroll-padding-top: 70px;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 17px/1.55 'Pixelify Sans', ui-monospace, monospace;
+  background-image: radial-gradient(var(--t2) 1.2px, transparent 1.3px);
+  background-size: 22px 22px;
+}
+
+h1, h2, h3 {
+  font-family: 'Bagel Fat One', 'Arial Rounded MT Bold', system-ui, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.05;
+}
+
+a {
+  color: inherit;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Ticker Marquee */
+.tick {
+  background: linear-gradient(90deg, var(--p2), var(--t2), var(--p2));
+  border-bottom: 2px solid var(--ln);
+  overflow: hidden;
+  white-space: nowrap;
+  color: #1d2b2a;
+  font-size: 15px;
+}
+
+.tick div {
+  display: inline-block;
+  padding: 4px 0;
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Navigation */
+nav {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 99;
+  background: var(--card);
+  border-bottom: 2px solid var(--ln);
+}
+
+nav .wrap {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  overflow-x: auto;
+  padding: 8px 16px;
+}
+
+nav b {
+  font: 400 22px 'Bagel Fat One';
+  color: var(--p1);
+  text-shadow: 2px 2px 0 var(--t2);
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 4px 12px;
+  border: 2px solid var(--ln);
+  background: var(--t3);
+  color: #1d2b2a;
+  box-shadow: 2px 2px 0 var(--ln);
+  white-space: nowrap;
+  transition: transform 0.1s ease;
+}
+
+nav a:hover, nav a:focus-visible {
+  background: var(--p2);
+  color: #fff;
+  outline: none;
+}
+
+/* Retro Window Container */
+.win {
+  background: var(--card);
+  border: 2px solid var(--ln);
+  box-shadow: 5px 5px 0 var(--ln);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  background: linear-gradient(90deg, var(--t1), var(--t3));
+  border-bottom: 2px solid var(--ln);
+  color: #10201f;
+  font-weight: 600;
+}
+
+.bar.pk {
+  background: linear-gradient(90deg, var(--p1), var(--p2));
+  color: #fff;
+}
+
+.bar span {
+  margin-left: auto;
+  letter-spacing: 3px;
+}
+
+.bar span i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--ln);
+  background: #fff;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+.body {
+  padding: 16px;
+}
+
+section {
+  padding: 36px 0;
+}
+
+h2 {
+  font-size: clamp(30px, 6vw, 46px);
+  color: var(--p1);
+  text-shadow: 3px 3px 0 var(--t2);
+  margin-bottom: 18px;
+}
+
+/* Buttons & Chips */
+.btn {
+  display: inline-block;
+  margin: 8px 8px 0 0;
+  padding: 8px 18px;
+  background: var(--p1);
+  color: #fff;
+  border: 2px solid var(--ln);
+  box-shadow: 4px 4px 0 var(--ln);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+
+.btn.alt {
+  background: var(--t2);
+  color: #10201f;
+}
+
+.btn:hover {
+  filter: brightness(1.08);
+}
+
+.btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--ln);
+}
+
+.chip {
+  display: inline-block;
+  background: var(--t3);
+  color: #10201f;
+  border: 2px solid var(--ln);
+  padding: 0 8px;
+  margin: 2px 2px 0 0;
+  font-size: 14px;
+}
+
+.role {
+  display: inline-block;
+  background: var(--p1);
+  color: #fff;
+  padding: 1px 10px;
+  border: 2px solid var(--ln);
+  margin: 6px 0;
+}
+
+/* Call to action */
+.cta {
+  text-align: center;
+  background: linear-gradient(120deg, var(--p2), var(--t2), var(--t3));
+  border: 2px solid var(--ln);
+  box-shadow: 5px 5px 0 var(--ln);
+  padding: 34px 16px;
+}
+
+.cta h2 {
+  margin: 0 0 8px;
+}
+
+footer {
+  border-top: 2px solid var(--ln);
+  background: var(--card);
+  padding: 22px 0;
+  text-align: center;
+  font-size: 15px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tick div {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--p1);
+  outline-offset: 2px;
+}

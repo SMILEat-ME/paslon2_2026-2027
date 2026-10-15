@@ -1,0 +1,97 @@
+---
+import { siteConfig } from '../data/campaign';
+---
+
+<section id="home" class="hero">
+  <div>
+    <p style="margin: 0 0 10px">
+      <span class="chip">Calon Ketua & Wakil Ketua OSIS</span>
+      <span class="chip">Periode {siteConfig.period}</span>
+    </p>
+    <h1>
+      “Born 02<span>Lead”</span>
+    </h1>
+    <p class="sub">
+      {siteConfig.subSlogan}
+    </p>
+    <a class="btn" href="#profil">kenali kami</a>
+    <a class="btn alt" href="#proker">lihat proker</a>
+  </div>
+
+  <div class="win ph">
+    <div class="bar pk">
+      {siteConfig.heroImage.windowTitle}
+      <span><i></i><i></i><i></i></span>
+    </div>
+    <img
+      src={siteConfig.heroImage.src}
+      alt={siteConfig.heroImage.alt}
+      width="1215"
+      height="1519"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="stk">{siteConfig.heroImage.sticker}</div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 28px;
+    align-items: center;
+    padding: 34px 0;
+  }
+
+  h1 {
+    font-size: clamp(34px, 7vw, 64px);
+    line-height: 1;
+    color: var(--p1);
+    text-shadow: 3px 3px 0 var(--t3), 6px 6px 0 var(--t1);
+    text-align: left;
+    transform: rotate(-2deg);
+    padding: 4px 8px 12px 0;
+  }
+
+  h1 span {
+    display: block;
+    font-size: 2.2em;
+    line-height: 1;
+    margin-top: 4px;
+  }
+
+  .sub {
+    font-size: 20px;
+    margin: 26px 0 4px;
+  }
+
+  .ph {
+    position: relative;
+  }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .stk {
+    position: absolute;
+    right: -10px;
+    bottom: -14px;
+    background: var(--p2);
+    color: #fff;
+    border: 2px solid var(--ln);
+    padding: 3px 10px;
+    transform: rotate(5deg);
+    font-weight: 600;
+  }
+
+  @media (max-width: 820px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

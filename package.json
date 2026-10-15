@@ -1,0 +1,17 @@
+{
+  "name": "paslon2_2026-2027",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Website Kampanye Paslon 02 Calon Ketua & Wakil Ketua OSIS HS Pewaris Bangsa 2026-2027",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.10",
+    "astro": "^5.3.0",
+    "typescript": "^5.9.3"
+  }
+}
