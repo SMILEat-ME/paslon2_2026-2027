@@ -22,6 +22,15 @@ export interface ProgramKerja {
   isPinkHeader?: boolean;
 }
 
+export interface KegiatanRutinItem {
+  id: string;
+  title: string;
+  windowTitle: string;
+  isPinkHeader?: boolean;
+  category: string;
+  description: string;
+}
+
 export const siteConfig = {
   title: "Born 02 Lead — Calon Ketua & Wakil Ketua OSIS HS Pewaris Bangsa 2026-2027",
   description: "Website resmi kampanye Paslon 02 Jeanne Felicia Angelique & Raden Nadya Herawati Asmara (Eden) untuk Pemilihan Ketua & Wakil Ketua OSIS Homeschooling Pewaris Bangsa 2026-2027.",
@@ -135,5 +144,56 @@ export const proker: ProgramKerja[] = [
     windowTitle: "bits_to_bliss.exe",
     isPinkHeader: false,
     description: "Program pengembangan keterampilan dan kreativitas siswa yang dilaksanakan secara berkala, dengan frekuensi sekitar satu hingga dua bulan sekali. Program ini akan menghadirkan kegiatan berupa lokakarya (workshop), webinar, atau sesi praktik yang memungkinkan siswa mempelajari keterampilan baru maupun mengembangkan kemampuan yang telah dimiliki. Topik kegiatan dapat mencakup berbagai bidang, seperti upcycling pakaian, pembuatan kerajinan clay, melukis, merajut, serta keterampilan kreatif dan praktis lainnya. Materi akan disesuaikan dengan minat siswa, ketersediaan narasumber, dan sumber daya yang dimiliki. Melalui program ini, siswa diharapkan dapat memperoleh pengalaman belajar yang aplikatif di luar pembelajaran akademik, mengeksplorasi potensi diri, serta menghasilkan karya yang dapat dibanggakan. Program ini juga diharapkan dapat mendorong budaya belajar sepanjang hayat, kreativitas, dan keberanian untuk mencoba hal-hal baru."
+  }
+];
+
+export const kegiatanRutin: KegiatanRutinItem[] = [
+  {
+    id: "ldk",
+    title: "Latihan Dasar Kepemimpinan",
+    windowTitle: "ldk.exe",
+    isPinkHeader: false,
+    category: "Leadership",
+    description: "Pelatihan kepemimpinan, kedisiplinan, dan manajemen organisasi untuk mencetak kader siswa yang berkarakter, berinisiatif tinggi, dan siap memimpin."
+  },
+  {
+    id: "camping",
+    title: "Camping",
+    windowTitle: "camping.exe",
+    isPinkHeader: true,
+    category: "Kebersamaan",
+    description: "Kegiatan perkemahan seru di alam terbuka untuk melatih kemandirian, kekompakan tim, solidaritas antarsiswa, dan kepedulian lingkungan."
+  },
+  {
+    id: "campus_tour",
+    title: "Academic/Campus Tour",
+    windowTitle: "campus_tour.exe",
+    isPinkHeader: false,
+    category: "Wawasan & Edukasi",
+    description: "Kunjungan edukatif ke berbagai kampus dan institusi akademik pilihan untuk memperluas cakrawala serta mempersiapkan masa depan siswa."
+  },
+  {
+    id: "bukber",
+    title: "Bukber",
+    windowTitle: "bukber.exe",
+    isPinkHeader: true,
+    category: "Silaturahmi",
+    description: "Agenda buka puasa bersama yang hangat dan penuh kebersamaan untuk mempererat silaturahmi, tali persaudaraan, dan toleransi antarwarga sekolah."
+  },
+  {
+    id: "agustusan",
+    title: "Agustusan",
+    windowTitle: "agustusan.exe",
+    isPinkHeader: false,
+    category: "Nasionalisme",
+    description: "Kemeriahan peringatan HUT Kemerdekaan RI dengan ragam kompetisi kreatif, seru, dan penuh sportivitas antarkelas yang membakar semangat nasionalisme."
+  },
+  {
+    id: "pb_fair",
+    title: "PB Fair",
+    windowTitle: "pb_fair.exe",
+    isPinkHeader: true,
+    category: "Pentas & Kreativitas",
+    description: "Pekan festival tahunan akbar Pewaris Bangsa yang menjadi wadah unjuk bakat, kreasi karya seni, bazar kewirausahaan siswa, dan hiburan meriah."
   }
 ];
